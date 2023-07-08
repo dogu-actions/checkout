@@ -27,6 +27,7 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
                 stdio: 'inherit',
                 cwd: deviceProjectGitPath,
                 shell: true,
+                env: (0, action_kit_1.newCleanNodeEnv)(),
             });
             logger.verbose?.('Command result', { result });
             if (result.status !== 0) {
