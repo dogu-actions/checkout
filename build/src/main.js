@@ -26,7 +26,7 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
             const args = process.platform === 'win32' ? ['/d', '/s', '/c'] : ['-c'];
             args.push(postCommand);
             logger.info('Running command', { command, args });
-            const result = (0, child_process_1.spawnSync)(postCommand, {
+            const result = (0, child_process_1.spawnSync)(command, args, {
                 stdio: 'inherit',
                 cwd: deviceProjectGitPath,
                 env: (0, action_kit_1.newCleanNodeEnv)(),
