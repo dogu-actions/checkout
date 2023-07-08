@@ -22,11 +22,13 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
         const deviceProjectGitPath = action_kit_1.HostPaths.deviceProjectGitPath(deviceProjectWorkspacePath);
         if (postCommand) {
             logger.info('Running post command...');
-            logger.info('Running command', { command: postCommand });
+            const command = process.platform === 'win32' ? process.env.COMSPEC || 'cmd.exe' : process.env.SHELL || '/bin/sh';
+            const args = process.platform === 'win32' ? ['/d', '/s', '/c'] : ['-c'];
+            args.push(postCommand);
+            logger.info('Running command', { command, args });
             const result = (0, child_process_1.spawnSync)(postCommand, {
                 stdio: 'inherit',
                 cwd: deviceProjectGitPath,
-                shell: true,
                 env: (0, action_kit_1.newCleanNodeEnv)(),
             });
             logger.verbose?.('Command result', { result });
