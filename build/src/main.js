@@ -20,22 +20,18 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
         const deviceProjectWorkspacePath = action_kit_1.HostPaths.deviceProjectWorkspacePath(DOGU_DEVICE_WORKSPACE_PATH, DOGU_PROJECT_ID);
         await fs_1.default.promises.mkdir(deviceProjectWorkspacePath, { recursive: true });
         const deviceProjectGitPath = action_kit_1.HostPaths.deviceProjectGitPath(deviceProjectWorkspacePath);
-        function command(command, args, logMessage, errorMessage) {
-            logger.info(logMessage);
-            logger.info('Running command', { command: `${command} ${args.join(' ')}` });
-            const result = (0, child_process_1.spawnSync)(command, args, {
+        if (postCommand) {
+            logger.info('Running post command...');
+            logger.info('Running command', { command: postCommand });
+            const result = (0, child_process_1.spawnSync)(postCommand, {
                 stdio: 'inherit',
                 cwd: deviceProjectGitPath,
+                shell: true,
             });
             logger.verbose?.('Command result', { result });
             if (result.status !== 0) {
-                throw new Error(errorMessage);
+                throw new Error(`Post command failed with status ${result.status}`);
             }
-        }
-        if (postCommand) {
-            const shell = process.platform === 'win32' ? process.env.COMSPEC || 'cmd.exe' : process.env.SHELL || '/bin/bash';
-            const firstArg = process.platform === 'win32' ? '/c' : '-c';
-            command(shell, [firstArg, postCommand], 'Running post command...', 'Post command failed');
         }
     }
 });
