@@ -15,16 +15,16 @@
   },
   "types": "./build/src/main.d.ts",
   "dependencies": {
-    "@dogu-tech/action-common": "latest",
-    "@dogu-tech/action-kit": "latest",
-    "@dogu-tech/common": "latest",
-    "@dogu-tech/console-action": "latest",
-    "@dogu-tech/device-client": "latest",
-    "@dogu-tech/device-client-common": "latest",
-    "@dogu-tech/device-interface": "latest",
-    "@dogu-tech/env-tools": "latest",
-    "@dogu-tech/node": "latest",
-    "@dogu-tech/types": "latest"
+    "@dogu-tech/action-common": "development",
+    "@dogu-tech/action-kit": "development",
+    "@dogu-tech/common": "development",
+    "@dogu-tech/console-action": "development",
+    "@dogu-tech/device-client": "development",
+    "@dogu-tech/device-client-common": "development",
+    "@dogu-tech/device-interface": "development",
+    "@dogu-tech/env-tools": "development",
+    "@dogu-tech/node": "development",
+    "@dogu-tech/types": "development"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
