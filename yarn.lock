@@ -75,8 +75,8 @@ __metadata:
   linkType: hard
 
 "@dogu-tech/action-kit@npm:development":
-  version: 0.0.54-development.3
-  resolution: "@dogu-tech/action-kit@npm:0.0.54-development.3"
+  version: 0.0.54-development.4
+  resolution: "@dogu-tech/action-kit@npm:0.0.54-development.4"
   dependencies:
     "@dogu-tech/action-common": development
     "@dogu-tech/common": development
@@ -92,7 +92,7 @@ __metadata:
     lodash: 4.17.21
     reflect-metadata: 0.1.13
     yaml: 2.2.1
-  checksum: effe664c2abb7c2d1ed1c1da641dfd57b18b1f5dd01a6da1e16d3af9a0c1818e5f44c17dabd8ec618fe1b2eb0e11769d8bd9a8f4f161823b56117dc6ada708c2
+  checksum: a0039eb4176d54c1ef027d4b552ced09e76d91f8d531506e85dbcc9964de224f5a8c9cc59081687f442cb2b716f2ba3b1fc7513e9311f29945cd1f858f84f8e4
   languageName: node
   linkType: hard
 
@@ -138,8 +138,8 @@ __metadata:
   linkType: hard
 
 "@dogu-tech/device-client@npm:development":
-  version: 0.0.55-development.3
-  resolution: "@dogu-tech/device-client@npm:0.0.55-development.3"
+  version: 0.0.55-development.4
+  resolution: "@dogu-tech/device-client@npm:0.0.55-development.4"
   dependencies:
     "@dogu-tech/common": development
     "@dogu-tech/device-client-common": development
@@ -150,7 +150,7 @@ __metadata:
     class-validator: 0.14.0
     reflect-metadata: 0.1.13
     ws: 8.13.0
-  checksum: ed5a4c39c156bdabb98a4db868c8a5d831371741aa117ee913845cbeea953e509d5ef7de3a209d59c738bdc6a253be54801e2387e12ec0ceff18403e710e87ec
+  checksum: 220e1413edd7919d0dda996540588009eec57573b1dd5f8b8604df3f4b5d77040954642fdb4e86c00a454a1bf160681267a56dbd6229b1915d877dec7e01000c
   languageName: node
   linkType: hard
 
@@ -170,8 +170,8 @@ __metadata:
   linkType: hard
 
 "@dogu-tech/node@npm:development":
-  version: 0.0.54-development.3
-  resolution: "@dogu-tech/node@npm:0.0.54-development.3"
+  version: 0.0.54-development.4
+  resolution: "@dogu-tech/node@npm:0.0.54-development.4"
   dependencies:
     "@dogu-tech/common": development
     "@dogu-tech/types": development
@@ -200,7 +200,7 @@ __metadata:
     winston-transport: 4.5.0
     ws: 8.13.0
     yaml: 2.2.1
-  checksum: 812a28d97fc7278c68b1e46bfbde75d04eee8fa228ff0cca5cd2ea3904a4e19caf4fe85d6e191e54e3c54415009971a3bc3cc0a95b316a7f8dab5a4572aab10a
+  checksum: 4d1e89bcab34e1865bfb043f21a17bfa0ae7b8a4c0899f91a0138486ef40b937baf28eaea7af7cecd972d7279e212eb888fce55eb0bde8963c218bee3e2989ce
   languageName: node
   linkType: hard
 
